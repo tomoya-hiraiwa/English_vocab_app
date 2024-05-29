@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".CreateFirstFragment">
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_margin="10dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/arrow_back_24px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create Quiz"
+        style="@style/text"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+    <TextView
+        android:layout_marginTop="40dp"
+        android:text="Enter Quiz title"
+        style="@style/text.subTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/quizNameFrame"
+        app:errorEnabled="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/quizNameEditText"
+            android:layout_width="match_parent"
+            android:inputType="text"
+            android:layout_height="wrap_content"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:textColor="@android:color/tertiary_text_dark"
+        android:text="note: You can use the Half-width alphanumeric characters."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:layout_marginTop="40dp"
+        android:text="Select Quiz type"
+        style="@style/text.subTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <RadioGroup
+        android:layout_marginTop="10dp"
+        android:id="@+id/quiz_type_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:checked="true"
+            android:textColor="@color/white"
+            android:text="Vocablary: English to Japanese"
+            android:id="@+id/VocabEnglishRB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:enabled="false"
+            android:textColor="@color/white"
+            android:text="Add type soon..."
+            android:id="@+id/soon1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:enabled="false"
+            android:textColor="@color/white"
+            android:text="Add type soon..."
+            android:id="@+id/soon2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </RadioGroup>
+    <Button
+        android:id="@+id/next_bt"
+        android:text="Next"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>
